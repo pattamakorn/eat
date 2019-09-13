@@ -95,7 +95,7 @@ public class login extends AppCompatActivity {
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(login.this, "Error:"+e.toString(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(login.this, "ไม่สามารถเข้าสู่ระบบได้กรุณาเช็ค \n E-mail\n Password", Toast.LENGTH_SHORT).show();
                         }
                     }
                 },new Response.ErrorListener(){
