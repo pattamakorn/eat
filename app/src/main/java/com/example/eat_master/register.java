@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -24,6 +25,7 @@ import java.util.Map;
 public class register extends AppCompatActivity {
     private EditText eemail,epassword,ename,eaddress,etel;
     private Button bregis;
+    private TextView backlogin;
     private String Url_register = "http://203.154.83.137/eat/register.php";
 
     @Override
@@ -36,12 +38,20 @@ public class register extends AppCompatActivity {
                     WindowManager.LayoutParams.FLAG_FULLSCREEN);
         }
 
+        backlogin = findViewById(R.id.Textbacklogin);
         eemail = findViewById(R.id.editemai);
         epassword = findViewById(R.id.editpassword);
         ename = findViewById(R.id.editname);
         eaddress = findViewById(R.id.editaddress);
         etel = findViewById(R.id.edittel);
         bregis = findViewById(R.id.register_btn);
+
+        backlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(register.this,login.class));
+            }
+        });
 
         bregis.setOnClickListener(new View.OnClickListener() {
             @Override
