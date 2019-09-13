@@ -121,8 +121,8 @@
 
     <Button
         android:id="@+id/register_btn"
-        android:layout_width="171dp"
-        android:layout_height="64dp"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -147,7 +147,7 @@
         android:layout_marginBottom="8dp"
         android:text="มีบัญชีอยู่แล้ว"
         android:textColor="#FD0024"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
