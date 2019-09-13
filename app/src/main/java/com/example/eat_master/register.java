@@ -3,8 +3,10 @@ package com.example.eat_master;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -29,6 +31,11 @@ public class register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        if (Build.VERSION.SDK_INT > 16) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
+
         eemail = findViewById(R.id.editemai);
         epassword = findViewById(R.id.editpassword);
         ename = findViewById(R.id.editname);
@@ -50,7 +57,10 @@ public class register extends AppCompatActivity {
                     @Override
                     public void onResponse(String ServerResponse) {
                         Toast.makeText(register.this, ServerResponse, Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(register.this,login.class));
+                        //startActivity(new Intent(register.this,login.class));
+                        Intent intent = new Intent(register.this, login.class);
+                        intent.putExtra("mail", eemail.getText().toString().trim());
+                        startActivity(intent);
                     }
                 },
                 new Response.ErrorListener() {

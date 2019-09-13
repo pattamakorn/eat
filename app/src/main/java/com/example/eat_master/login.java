@@ -3,8 +3,10 @@ package com.example.eat_master;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -36,11 +38,17 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        if (Build.VERSION.SDK_INT > 16) {
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                    WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        }
 
         email = findViewById(R.id.emaillogin);
         pass = findViewById(R.id.passwordlogin);
         login = findViewById(R.id.login_btn);
         tregister = findViewById(R.id.TextRegister);
+
+
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
