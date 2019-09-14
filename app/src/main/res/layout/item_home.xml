@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imagefood"
+        android:paddingLeft="10dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo" />
+    <LinearLayout
+        android:paddingTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp">
+    <TextView
+        android:id="@+id/namefood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ชื่ออาหาร"
+        android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/nameres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ชื่อร้านอาหาร"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/pricefood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ราคาอาหาร"
+                android:textStyle="bold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" บาท"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:gravity="end"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="0dp"
+            android:text="สั่งเลย"
+            android:textColor="#FF5722"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>
